@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Header Section => Nav Bar and search Box -->
+    <header>
+        <!-- Simple nav bar -->
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">
+                    Find Books
+                </a>
+            </div>
+        </nav>
+        <!-- Search Box -->
+        <div class="w-50 mx-auto m-5 text-center">
+            <h2 class="mb-3 fw-bold text-info">Search Books From Our Archive</h2>
+            <div class="input-group mb-3">
+                <input id="seach-text" type="text" class="form-control" placeholder="Book's Name"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="searchBooks()" class="btn btn-outline-info" type="button"
+                    id="button-addon2">Search</button>
+            </div>
+        </div>
+    </header>
+    <!-- Main section -->
+    <main>
+        <!-- Spinner and message section -->
+        <section>
+            <!-- spinner -->
+            <div id='spinner' class="d-flex justify-content-center d-none">
+                <div class="spinner-border" role="status">
+                </div>
+            </div>
+
+            <!-- Message Section -->
+            <div id="message" class="text-center d-none">
+                <h1 id="message-text" class="text-warning"></h1>
+            </div>
+
+        </section>
+
+        <!-- Search result => if found -->
+        <section class="text-center">
+            <h3 id="total-count" class="text-success"></h3>
+            <div id="allBooks" class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 p-5">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- Local js -->
+    <script src="js/app.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
