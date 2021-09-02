@@ -26,20 +26,22 @@ const searchBooks = async () => {
     message.classList = 'text-center d-none';
     const messageText = getById('message-text')
 
+    //Get books display section
+    const allBooks = getById('allBooks');
+    const showTotal = getById('total-count');
+
+    //clear total count and previos loaded data
+    showTotal.innerHTML = '';
+    allBooks.innerHTML = '';
+
+
     if (searchText === '') {
         messageText.innerText = 'Please write something to search !!'
         message.classList = 'text-center d-block'
     } else {
-        const allBooks = getById('allBooks');
-        const showTotal = getById('total-count');
-
         // visible spinner
         const spinner = getById('spinner');
         spinner.classList = 'd-flex justify-content-center d-block'
-
-        //clear total count and previos loaded data
-        showTotal.innerHTML = '';
-        allBooks.innerHTML = '';
 
         //make url using search text and fetch data
         const bookUrl = `https://openlibrary.org/search.json?q=${searchText}`;
