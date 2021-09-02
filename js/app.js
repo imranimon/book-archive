@@ -75,7 +75,7 @@ const searchBooks = async () => {
                         <img height="495" width="349"  src="${imgUrl}" class="card-img-top" alt="cover-image">
                         <div class="card-body">
                             <h3 class="card-title">Title: ${book.title.substring(0, 15)}</h3>
-                            <h6>Authon: ${book.author_name}</h6>
+                            <h6>Author: ${book.author_name}</h6>
                             <h6>First Published: ${publishDate}</h6> 
                         </div>
                     </div> 
